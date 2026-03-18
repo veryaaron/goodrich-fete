@@ -1,0 +1,18 @@
+name = "goodrich-fete"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+
+[assets]
+directory = "./public"
+
+# To set up KV for contact form storage, run:
+#   npx wrangler kv namespace create CONTACT_SUBMISSIONS
+# Then paste the id below.
+#
+# To set up Resend for email notifications:
+#   npx wrangler secret put RESEND_API_KEY
+# Then paste your Resend API key.
+
+# [[kv_namespaces]]
+# binding = "CONTACT_SUBMISSIONS"
+# id = "paste-id-here"

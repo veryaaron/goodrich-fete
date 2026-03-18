@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goodrich Summer Fete 2026 — 27th June at The Old Vicarage</title>
+  <meta name="description" content="Join us for the Goodrich Summer Fete on 27th June 2026 at The Old Vicarage. Traditional games, bake-off, dog show, live music, wood-fired pizza and more. From noon onwards.">
+  <meta property="og:title" content="Goodrich Summer Fete 2026">
+  <meta property="og:description" content="27th June 2026 at The Old Vicarage. Traditional games, competitions, live music, food and fun for all ages.">
+  <meta property="og:url" content="https://goodrichfete.com">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://goodrichfete.com/images/Unknown.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader__bunting">
+      <svg viewBox="0 0 200 60" class="loader__svg">
+        <path d="M0,10 Q50,0 100,10 Q150,0 200,10" fill="none" stroke="#5a7a5e" stroke-width="2" class="loader__string"/>
+        <polygon points="30,12 45,45 15,45" fill="#c45670" class="loader__flag loader__flag--1"/>
+        <polygon points="70,10 85,43 55,43" fill="#d4a843" class="loader__flag loader__flag--2"/>
+        <polygon points="110,10 125,43 95,43" fill="#5a7a5e" class="loader__flag loader__flag--3"/>
+        <polygon points="150,12 165,45 135,45" fill="#c45670" class="loader__flag loader__flag--4"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#home" class="nav__logo">Goodrich Fete</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#whats-on">What's On</a></li>
+        <li><a href="#competitions">Competitions</a></li>
+        <li><a href="#food-drink">Food &amp; Drink</a></li>
+        <li><a href="#evening">Evening</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact" class="btn btn--nav">Get Involved</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <!-- Fallback image (shown while video loads + mobile) -->
+    <div class="hero__bg" data-parallax="0.4">
+      <img src="/images/Unknown.jpg" alt="Goodrich Summer Fete - crowds enjoying the festival on the grounds of The Old Vicarage" loading="eager">
+    </div>
+    <!-- YouTube video background -->
+    <div class="hero__video" id="heroVideo">
+      <div id="ytPlayer"></div>
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="hero__particles" id="heroParticles"></div>
+    <div class="hero__content">
+      <p class="hero__supertitle" data-reveal data-delay="0">You're Invited</p>
+      <h1 class="hero__title" data-reveal data-delay="100">
+        <span class="hero__title-line">Goodrich</span>
+        <span class="hero__title-line hero__title-line--accent">Summer Fete</span>
+      </h1>
+      <div class="hero__details" data-reveal data-delay="200">
+        <span class="hero__detail"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 27th June 2026</span>
+        <span class="hero__detail"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> The Old Vicarage, Goodrich</span>
+        <span class="hero__detail"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> From Noon</span>
+      </div>
+      <div class="hero__countdown" id="countdown" data-reveal data-delay="300">
+        <div class="countdown__unit">
+          <span class="countdown__number" id="countDays">--</span>
+          <span class="countdown__label">Days</span>
+        </div>
+        <div class="countdown__separator">:</div>
+        <div class="countdown__unit">
+          <span class="countdown__number" id="countHours">--</span>
+          <span class="countdown__label">Hours</span>
+        </div>
+        <div class="countdown__separator">:</div>
+        <div class="countdown__unit">
+          <span class="countdown__number" id="countMinutes">--</span>
+          <span class="countdown__label">Minutes</span>
+        </div>
+        <div class="countdown__separator">:</div>
+        <div class="countdown__unit">
+          <span class="countdown__number" id="countSeconds">--</span>
+          <span class="countdown__label">Seconds</span>
+        </div>
+      </div>
+      <div class="hero__cta" data-reveal data-delay="400">
+        <a href="#whats-on" class="btn btn--primary">Discover What's On</a>
+        <a href="#contact" class="btn btn--outline">Get Involved</a>
+      </div>
+      <button class="hero__sound-btn" id="heroSoundBtn" data-reveal data-delay="500" aria-label="Watch video with sound">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15" class="sound-off-1"/><line x1="17" y1="9" x2="23" y2="15" class="sound-off-2"/></svg>
+        <span>Watch with sound</span>
+      </button>
+    </div>
+    <div class="hero__scroll">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Decorative SVG wave -->
+  <div class="wave wave--hero">
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+      <path d="M0,40 C360,100 720,0 1080,60 C1260,80 1380,40 1440,50 L1440,100 L0,100 Z" fill="var(--color-cream)"/>
+    </svg>
+  </div>
+
+  <!-- About -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__text">
+          <span class="section__tag" data-reveal>Welcome</span>
+          <h2 class="section__title" data-reveal>A Celebration of<br><em>Community & Countryside</em></h2>
+          <p class="about__lead" data-reveal>The Goodrich Summer Fete is a beloved tradition bringing together our village and visitors for a glorious day of fun, food, and friendly competition in the beautiful grounds of The Old Vicarage.</p>
+          <p data-reveal>From classic fete games and spirited competitions to mouthwatering food stalls and live music, there's something for absolutely everyone. Whether you're a seasoned competitor in the Great Goodrich Bake-Off or just fancy a go at the coconut shy, we'd love to see you there.</p>
+          <p data-reveal>All proceeds go directly back into our local community.</p>
+          <div class="about__stats" data-reveal>
+            <div class="stat">
+              <span class="stat__number">1</span>
+              <span class="stat__label">Glorious Day</span>
+            </div>
+            <div class="stat">
+              <span class="stat__number">12+</span>
+              <span class="stat__label">Attractions</span>
+            </div>
+            <div class="stat">
+              <span class="stat__number">4</span>
+              <span class="stat__label">Competitions</span>
+            </div>
+            <div class="stat">
+              <span class="stat__number">&infin;</span>
+              <span class="stat__label">Memories</span>
+            </div>
+          </div>
+        </div>
+        <div class="about__image" data-reveal>
+          <div class="about__image-wrapper">
+            <img src="/images/image01-2.jpg" alt="Fete visitors enjoying the festivities under colourful bunting at The Old Vicarage" loading="lazy">
+          </div>
+          <div class="about__image-accent"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee ticker -->
+  <div class="marquee">
+    <div class="marquee__track">
+      <span class="marquee__item">Coconut Shy</span>
+      <span class="marquee__dot"></span>
+      <span class="marquee__item">Bake-Off</span>
+      <span class="marquee__dot"></span>
+      <span class="marquee__item">Dog Show</span>
+      <span class="marquee__dot"></span>
+      <span class="marquee__item">Wood-Fired Pizza</span>
+      <span class="marquee__dot"></span>
+      <span class="marquee__item">Live Music</span>
+      <span class="marquee__dot"></span>
+      <span class="marquee__item">Splat the Rat</span>
+      <span class="marquee__dot"></span>
+      <span class="marquee__item">Bouncy Castle</span>
+      <span class="marquee__dot"></span>
+      <span class="marquee__item">BBQ</span>
+      <span class="marquee__dot"></span>
+      <span class="marquee__item">Growers Competition</span>
+      <span class="marquee__dot"></span>
+      <span class="marquee__item">Children's Art</span>
+      <span class="marquee__dot"></span>
+      <!-- Duplicate for seamless loop -->
+      <span class="marquee__item">Coconut Shy</span>
+      <span class="marquee__dot"></span>
+      <span class="marquee__item">Bake-Off</span>
+      <span class="marquee__dot"></span>
+      <span class="marquee__item">Dog Show</span>
+      <span class="marquee__dot"></span>
+      <span class="marquee__item">Wood-Fired Pizza</span>
+      <span class="marquee__dot"></span>
+      <span class="marquee__item">Live Music</span>
+      <span class="marquee__dot"></span>
+      <span class="marquee__item">Splat the Rat</span>
+      <span class="marquee__dot"></span>
+      <span class="marquee__item">Bouncy Castle</span>
+      <span class="marquee__dot"></span>
+      <span class="marquee__item">BBQ</span>
+      <span class="marquee__dot"></span>
+      <span class="marquee__item">Growers Competition</span>
+      <span class="marquee__dot"></span>
+      <span class="marquee__item">Children's Art</span>
+      <span class="marquee__dot"></span>
+    </div>
+  </div>
+
+  <!-- What's On -->
+  <section class="attractions section section--sage" id="whats-on">
+    <div class="container">
+      <span class="section__tag section__tag--light" data-reveal>What's On</span>
+      <h2 class="section__title section__title--light" data-reveal>Fun for <em>Everyone</em></h2>
+      <p class="section__subtitle section__subtitle--light" data-reveal>A day packed with traditional entertainment, games, and activities for all ages.</p>
+      <div class="attractions__grid">
+        <div class="attraction-card" data-reveal data-delay="0">
+          <div class="attraction-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><circle cx="24" cy="16" r="10"/><path d="M18 26v14M30 26v14M24 26v16"/><ellipse cx="24" cy="14" rx="6" ry="8"/></svg>
+          </div>
+          <h3>Coconut Shy</h3>
+          <p>Test your aim at the classic fairground favourite. Three balls, one prize — can you knock one down?</p>
+        </div>
+        <div class="attraction-card" data-reveal data-delay="50">
+          <div class="attraction-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><rect x="10" y="32" width="28" height="8" rx="2"/><path d="M14 32V20a10 10 0 0120 0v12"/><circle cx="24" cy="18" r="3"/></svg>
+          </div>
+          <h3>Splat the Rat</h3>
+          <p>Quick reflexes needed! Watch the pipe and splat the rat as it drops. Harder than it looks.</p>
+        </div>
+        <div class="attraction-card" data-reveal data-delay="100">
+          <div class="attraction-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 40c0-12 8-20 16-28 8 8 16 16 16 28"/><path d="M14 40c0-8 4-14 10-20 6 6 10 12 10 20"/></svg>
+          </div>
+          <h3>Bouncy Castles</h3>
+          <p>Hours of bouncing fun for the little ones. Multiple inflatables to keep them entertained all afternoon.</p>
+        </div>
+        <div class="attraction-card" data-reveal data-delay="150">
+          <div class="attraction-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 38h36M10 38V18l14-10 14 10v20"/><rect x="18" y="26" width="12" height="12"/><rect x="20" y="10" width="8" height="8"/></svg>
+          </div>
+          <h3>Fire Service Demo</h3>
+          <p>Our local fire service puts on a thrilling demonstration. A highlight for the kids (and big kids too).</p>
+        </div>
+        <div class="attraction-card" data-reveal data-delay="200">
+          <div class="attraction-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><circle cx="24" cy="20" r="12"/><path d="M16 32c-4 2-6 4-6 8h28c0-4-2-6-6-8"/><path d="M20 16v-4M28 16v-4M24 14v-6"/></svg>
+          </div>
+          <h3>Live Music</h3>
+          <p>Enjoy the Roaring Megs choir, bandeoke singalongs, and more live performances throughout the day.</p>
+        </div>
+        <div class="attraction-card" data-reveal data-delay="250">
+          <div class="attraction-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="28" r="8"/><circle cx="30" cy="28" r="8"/><path d="M18 20V8M30 20V8"/><path d="M12 12h12M24 12h12"/></svg>
+          </div>
+          <h3>And Much More</h3>
+          <p>Tombola, raffle, plant stalls, craft stands, and plenty of surprises on the day. Something for everyone.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Competitions -->
+  <section class="competitions section" id="competitions">
+    <div class="container">
+      <span class="section__tag" data-reveal>Competitions</span>
+      <h2 class="section__title" data-reveal>Show Off Your <em>Talents</em></h2>
+      <p class="section__subtitle" data-reveal>Four fantastic competitions with categories for all ages. Entry is free — bring your best!</p>
+
+      <div class="competitions__grid">
+        <!-- Bake-Off -->
+        <div class="competition-card competition-card--wide" data-reveal>
+          <div class="competition-card__image">
+            <img src="/images/3d2f8fc7-2.jpg" alt="A beautifully decorated cake topped with fresh berries" loading="lazy">
+          </div>
+          <div class="competition-card__content">
+            <span class="competition-card__number">01</span>
+            <h3>The Great Goodrich Bake-Off</h3>
+            <p>Our legendary baking competition returns with categories for Victoria Sponge, Coffee &amp; Walnut, Lemon Drizzle, Brownies, Decorated Cakes, and Children's Cupcakes (under 12s).</p>
+            <div class="competition-card__detail">
+              <strong>Entries by 09:45</strong> at The Old Vicarage on fete day
+            </div>
+          </div>
+        </div>
+
+        <!-- Growers -->
+        <div class="competition-card" data-reveal>
+          <div class="competition-card__image">
+            <img src="/images/031512c7-2.jpg" alt="A colourful tray display of fresh home-grown vegetables" loading="lazy">
+          </div>
+          <div class="competition-card__content">
+            <span class="competition-card__number">02</span>
+            <h3>Growers Competition</h3>
+            <p>Show off your green fingers with tray displays and flower arrangements. All produce must be self-grown.</p>
+            <div class="competition-card__detail">
+              <strong>Entries from 08:30</strong> on fete day
+            </div>
+          </div>
+        </div>
+
+        <!-- Dog Show -->
+        <div class="competition-card" data-reveal>
+          <div class="competition-card__image">
+            <img src="/images/image02-2.jpg" alt="A beautiful spaniel at an outdoor event" loading="lazy">
+          </div>
+          <div class="competition-card__content">
+            <span class="competition-card__number">03</span>
+            <h3>Dog Show</h3>
+            <p>Best Trick, Most Like Owner, Fancy Dress, Veteran, Prettiest Bitch, Most Handsome, Waggiest Tail, and Temptation Alley.</p>
+            <div class="competition-card__detail">
+              <strong>Registration at 3pm</strong> at the fete
+            </div>
+          </div>
+        </div>
+
+        <!-- Children's Art -->
+        <div class="competition-card competition-card--accent" data-reveal>
+          <div class="competition-card__content competition-card__content--full">
+            <span class="competition-card__number">04</span>
+            <h3>Children's Art Competition</h3>
+            <p>This year's theme: <strong>The River Wye</strong>. 2D entries only, A3 maximum. Age groups: Under 7, 8–11, and Over 12.</p>
+            <div class="competition-card__detail">
+              <strong>Entries by 09:00</strong> on fete day
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image break -->
+  <div class="image-break">
+    <img src="/images/470624ec-2.jpg" alt="Colourful fresh produce display" loading="lazy">
+  </div>
+
+  <!-- Food & Drink -->
+  <section class="food section" id="food-drink">
+    <div class="container">
+      <span class="section__tag" data-reveal>Food &amp; Drink</span>
+      <h2 class="section__title" data-reveal>Feast Your <em>Senses</em></h2>
+      <p class="section__subtitle" data-reveal>From sizzling barbecue to wood-fired pizza, there's something to satisfy every appetite.</p>
+
+      <div class="food__grid">
+        <div class="food-card" data-reveal data-delay="0">
+          <div class="food-card__emoji">&#x1F525;</div>
+          <h3>BBQ</h3>
+          <p>Classic burgers and hot dogs cooked to perfection.</p>
+        </div>
+        <div class="food-card" data-reveal data-delay="80">
+          <div class="food-card__emoji">&#x1F355;</div>
+          <h3>Wood-Fired Pizza</h3>
+          <p>Freshly made artisan pizzas from our on-site oven.</p>
+        </div>
+        <div class="food-card" data-reveal data-delay="160">
+          <div class="food-card__emoji">&#x1F336;&#xFE0F;</div>
+          <h3>Mexican Fiesta Bar</h3>
+          <p>Refreshing drinks for adults and little ones alike.</p>
+        </div>
+        <div class="food-card" data-reveal data-delay="240">
+          <div class="food-card__emoji">&#x2615;</div>
+          <h3>Tea, Coffee &amp; Cake</h3>
+          <p>A proper cuppa and a slice — the heart of any good fete.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Evening Event -->
+  <section class="evening section section--dark" id="evening">
+    <div class="container">
+      <div class="evening__grid">
+        <div class="evening__content">
+          <span class="section__tag section__tag--light" data-reveal>From 5pm</span>
+          <h2 class="section__title section__title--light" data-reveal>The Evening <em>Continues</em></h2>
+          <p class="evening__lead" data-reveal>As the afternoon winds down, the fun moves to The Hostelrie for an evening of live music and great food.</p>
+          <ul class="evening__list" data-reveal>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+              Live band
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+              Everyone welcome
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 8l4 4-4 4"/><path d="M3 12h18"/><path d="M12 3v18"/></svg>
+              BBQ continues at the pub
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              5pm &ndash; late
+            </li>
+          </ul>
+        </div>
+        <div class="evening__image" data-reveal>
+          <div class="evening__image-wrapper">
+            <img src="/images/Unknown-2.jpg" alt="Community members enjoying the fete together" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery section" id="gallery">
+    <div class="container">
+      <span class="section__tag" data-reveal>Gallery</span>
+      <h2 class="section__title" data-reveal>Memories from <em>Previous Years</em></h2>
+      <p class="section__subtitle" data-reveal>A taste of what's in store.</p>
+    </div>
+    <div class="gallery__mosaic">
+      <div class="gallery__item gallery__item--wide" data-reveal>
+        <img src="/images/image01-2.jpg" alt="Crowds gathered under colourful bunting at the fete" loading="lazy">
+      </div>
+      <div class="gallery__item" data-reveal data-delay="50">
+        <img src="/images/b0218237-2.jpg" alt="An elegant cake decorated with macarons and figs" loading="lazy">
+      </div>
+      <div class="gallery__item" data-reveal data-delay="100">
+        <img src="/images/image02-2.jpg" alt="A spaniel enjoying the sunshine at the fete" loading="lazy">
+      </div>
+      <div class="gallery__item gallery__item--wide" data-reveal data-delay="150">
+        <img src="/images/Unknown.jpg" alt="Aerial view of the fete grounds" loading="lazy">
+      </div>
+      <div class="gallery__item" data-reveal data-delay="200">
+        <img src="/images/3d2f8fc7-2.jpg" alt="Fresh berry cake from the bake-off" loading="lazy">
+      </div>
+      <div class="gallery__item" data-reveal data-delay="250">
+        <img src="/images/470624ec-2.jpg" alt="Vibrant produce display" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Highlight -->
+  <section class="video section section--dark" id="video">
+    <div class="container">
+      <div class="video__header">
+        <span class="section__tag section__tag--light" data-reveal>Last Year</span>
+        <h2 class="section__title section__title--light" data-reveal>See It In <em>Action</em></h2>
+        <p class="section__subtitle section__subtitle--light" data-reveal>A taste of the magic from our last fete. Video courtesy of <strong>Fizzi Events</strong>.</p>
+      </div>
+      <div class="video__wrapper" data-reveal>
+        <div class="video__container" id="videoContainer">
+          <div class="video__poster" id="videoPoster">
+            <img src="/images/image01-2.jpg" alt="Goodrich Fete highlights" loading="lazy">
+            <div class="video__poster-overlay"></div>
+            <button class="video__play-btn" id="videoPlayBtn" aria-label="Play video">
+              <svg viewBox="0 0 68 68" fill="none">
+                <circle cx="34" cy="34" r="33" stroke="white" stroke-width="2" opacity="0.6"/>
+                <circle cx="34" cy="34" r="28" fill="white" fill-opacity="0.15"/>
+                <polygon points="28,22 28,46 48,34" fill="white"/>
+              </svg>
+            </button>
+          </div>
+          <iframe id="videoIframe" class="video__iframe" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Get Involved -->
+  <section class="contact section section--sage" id="contact">
+    <div class="container">
+      <div class="contact__grid">
+        <div class="contact__info">
+          <span class="section__tag section__tag--light" data-reveal>Get Involved</span>
+          <h2 class="section__title section__title--light" data-reveal>Be Part of <em>Something Special</em></h2>
+          <p class="contact__lead" data-reveal>Whether you'd like to volunteer, run a stall, enter a competition, or just find out more — we'd love to hear from you.</p>
+          <div class="contact__details" data-reveal>
+            <a href="mailto:hello@goodrichfete.com" class="contact__email">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
+              hello@goodrichfete.com
+            </a>
+          </div>
+          <div class="contact__cta" data-reveal>
+            <p>We're always looking for helping hands. If you can spare some time on the day — setting up, running a stall, or tidying up afterwards — please get in touch.</p>
+          </div>
+        </div>
+        <div class="contact__form-wrapper" data-reveal>
+          <form class="contact__form" id="contactForm">
+            <div class="form__group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" required placeholder="Jane Smith">
+            </div>
+            <div class="form__group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required placeholder="jane@example.com">
+            </div>
+            <div class="form__group">
+              <label for="interest">I'm interested in...</label>
+              <select id="interest" name="interest">
+                <option value="general">General enquiry</option>
+                <option value="volunteer">Volunteering</option>
+                <option value="stall">Running a stall</option>
+                <option value="competition">Competition info</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+            <div class="form__group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us what you have in mind..."></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+            <p class="form__privacy">By submitting, you agree to our <a href="/privacy.html">privacy policy</a>.</p>
+            <p class="form__status" id="formStatus"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__bunting">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" class="footer__bunting-svg">
+        <path d="M0,10 Q180,0 360,10 Q540,0 720,10 Q900,0 1080,10 Q1260,0 1440,10" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+        <polygon points="90,12 110,40 70,40" fill="rgba(196,86,112,0.3)"/>
+        <polygon points="270,10 290,38 250,38" fill="rgba(212,168,67,0.3)"/>
+        <polygon points="450,12 470,40 430,40" fill="rgba(90,122,94,0.3)"/>
+        <polygon points="630,10 650,38 610,38" fill="rgba(196,86,112,0.3)"/>
+        <polygon points="810,12 830,40 790,40" fill="rgba(212,168,67,0.3)"/>
+        <polygon points="990,10 1010,38 970,38" fill="rgba(90,122,94,0.3)"/>
+        <polygon points="1170,12 1190,40 1150,40" fill="rgba(196,86,112,0.3)"/>
+        <polygon points="1350,10 1370,38 1330,38" fill="rgba(212,168,67,0.3)"/>
+      </svg>
+    </div>
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <h3>Goodrich Summer Fete</h3>
+          <p>27th June 2026 &middot; The Old Vicarage</p>
+          <p>From noon onwards</p>
+        </div>
+        <div class="footer__links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#whats-on">What's On</a></li>
+            <li><a href="#competitions">Competitions</a></li>
+            <li><a href="#food-drink">Food &amp; Drink</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>Get In Touch</h4>
+          <ul>
+            <li><a href="mailto:hello@goodrichfete.com">hello@goodrichfete.com</a></li>
+            <li><a href="#contact">Volunteer</a></li>
+            <li><a href="#contact">Run a Stall</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Goodrich Summer Fete. All proceeds benefit the local community. <a href="/privacy.html">Privacy Policy</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="/script.js"></script>
+</body>
+</html>
