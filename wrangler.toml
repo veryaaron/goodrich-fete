@@ -13,6 +13,6 @@ directory = "./public"
 #   npx wrangler secret put RESEND_API_KEY
 # Then paste your Resend API key.
 
-# [[kv_namespaces]]
-# binding = "CONTACT_SUBMISSIONS"
-# id = "paste-id-here"
+[[kv_namespaces]]
+binding = "CONTACT_SUBMISSIONS"
+id = "a245c6fd10e74e8fa1275117fb5f023b"
