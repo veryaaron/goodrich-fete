@@ -1,6 +1,10 @@
+interface SecretsStoreSecret {
+  get(): Promise<string>;
+}
+
 interface Env {
   CONTACT_SUBMISSIONS?: KVNamespace;
-  RESEND_API_KEY?: string;
+  RESEND_API_KEY?: SecretsStoreSecret;
 }
 
 interface ContactSubmission {
@@ -46,9 +50,9 @@ export default {
 
         // Send email notification via Resend (non-blocking)
         if (env.RESEND_API_KEY) {
-          sendEmailNotification(env.RESEND_API_KEY, submission).catch((err) =>
-            console.error('Email send failed:', err)
-          );
+          env.RESEND_API_KEY.get()
+            .then((apiKey) => sendEmailNotification(apiKey, submission))
+            .catch((err) => console.error('Email send failed:', err));
         }
 
         return jsonResponse({ success: true, message: 'Thank you for your message!' });

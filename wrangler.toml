@@ -5,14 +5,11 @@ compatibility_date = "2025-01-01"
 [assets]
 directory = "./public"
 
-# To set up KV for contact form storage, run:
-#   npx wrangler kv namespace create CONTACT_SUBMISSIONS
-# Then paste the id below.
-#
-# To set up Resend for email notifications:
-#   npx wrangler secret put RESEND_API_KEY
-# Then paste your Resend API key.
-
 [[kv_namespaces]]
 binding = "CONTACT_SUBMISSIONS"
 id = "a245c6fd10e74e8fa1275117fb5f023b"
+
+[[secrets_store_secrets]]
+binding = "RESEND_API_KEY"
+store_id = "794f14e962284f1f956fb2a4b4d14c00"
+secret_name = "RESEND_API_KEY"
