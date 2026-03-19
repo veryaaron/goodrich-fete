@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Bunting string -->
+  <path d="M2,8 Q10,4 16,8 Q22,4 30,8" fill="none" stroke="#5a7a5e" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Flag 1 - berry -->
+  <polygon points="7,9 12,22 2,22" fill="#c45670"/>
+  <!-- Flag 2 - honey -->
+  <polygon points="16,8 21,21 11,21" fill="#d4a843"/>
+  <!-- Flag 3 - sage -->
+  <polygon points="25,9 30,22 20,22" fill="#5a7a5e"/>
+  <!-- G letter -->
+  <text x="16" y="30" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="10" fill="#2a332a">G</text>
+</svg>
