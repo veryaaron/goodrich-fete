@@ -124,7 +124,7 @@ async function sendEmailNotification(apiKey: string, submission: ContactSubmissi
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      from: 'Goodrich Fete <noreply@goodrichfete.com>',
+      from: 'Goodrich Fete <noreply@post.goodrichfete.com>',
       to: ['hello@goodrichfete.com'],
       subject: `Fete enquiry from ${submission.name}`,
       html,
